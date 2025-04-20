@@ -18,11 +18,12 @@ app.use(cookieParser());
 app.get('/ping',function(req,res){
        res.send('pong');
 })
-// routes of 3 modules
 
-app.all('*',(req,res)=>{
-res.status(404).send('OOPS!! 404 page not found');
-});
+
+app.all('*', (req, res) => {
+    res.status(404).send('OOPS!! 404 page not found');
+  });
+  
  
 
 module.exports=app;
